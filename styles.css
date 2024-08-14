@@ -1,7 +1,8 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #080808; /* Dark background */
-    color: #38bd4a; /* Light green text color */
+    background-color: #080808; /* Dark background for better contrast */
+    color: #38bd4a; /* Complementary green text */
     text-align: center;
     margin: 0;
     padding: 0;
@@ -13,7 +14,7 @@ body {
 }
 
 h1 {
-    color: #00796b; /* Complementary blue-green for heading */
+    color: #ffffff; /* White color for heading */
     font-size: 36px; /* Larger font size */
     margin-top: 20px; /* Adjust margin for spacing */
 }
