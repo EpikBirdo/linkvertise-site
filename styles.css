@@ -6,22 +6,28 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
 }
 
 h1 {
     color: #00796b; /* Complementary blue-green for heading */
-    margin-top: 50px;
+    font-size: 36px; /* Larger font size */
+    margin-top: 20px; /* Adjust margin for spacing */
 }
 
 button {
     background-color: #ff7043; /* Orange button color */
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 15px 30px; /* Larger button padding */
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px; /* Larger font size for buttons */
     transition: background-color 0.3s ease;
 }
 
