@@ -1,5 +1,59 @@
 {
-    "link1": "LINK_1_HERE",
-    "link2": "LINK_2_HERE",
-    "link3": "LINK_3_HERE"
-}
+    "Asian": [
+      {
+        "name": "asian-candy",
+        "url": "https://linkvertise.com/your-link-1"
+      },
+      {
+        "name": "aeries-steele",
+        "url": "https://linkvertise.com/your-link-2"
+      },
+      {
+        "name": "triplexceleste",
+        "url": "https://linkvertise.com/your-link-3"
+      }
+    ],
+    "Latina": [
+      {
+        "name": "katiana-key",
+        "url": "https://linkvertise.com/your-link-4"
+      },
+      {
+        "name": "ester-muniz",
+        "url": "https://linkvertise.com/your-link-5"
+      },
+      {
+        "name": "ash-kaash",
+        "url": "https://linkvertise.com/your-link-6"
+      }
+    ],
+    "White": [
+      {
+        "name": "sophie-rain",
+        "url": "https://linkvertise.com/your-link-7"
+      },
+      {
+        "name": "breckie-hill",
+        "url": "https://linkvertise.com/your-link-8"
+      },
+      {
+        "name": "jameliz",
+        "url": "https://linkvertise.com/your-link-9"
+      }
+    ],
+    "Misc": [
+      {
+        "name": "misc-link-1",
+        "url": "https://linkvertise.com/your-link-10"
+      },
+      {
+        "name": "misc-link-2",
+        "url": "https://linkvertise.com/your-link-11"
+      },
+      {
+        "name": "misc-link-3",
+        "url": "https://linkvertise.com/your-link-12"
+      }
+    ]
+  }
+  
