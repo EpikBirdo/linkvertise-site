@@ -9,9 +9,39 @@
 <body>
     <h1>Linkvertise Links</h1>
     <div class="button-container">
-        <button onclick="window.location.href='https://linkvertise.com/your-link-1';">Asian</button>
-        <button onclick="window.location.href='https://linkvertise.com/your-link-2';">Latina</button>
-        <button onclick="window.location.href='https://linkvertise.com/your-link-3';">White</button>
+        <div class="dropdown">
+            <button class="dropbtn">Asian</button>
+            <div class="dropdown-content">
+                <a href="https://linkvertise.com/your-link-1">Link 1</a>
+                <a href="https://linkvertise.com/your-link-2">Link 2</a>
+                <!-- Add more links as needed -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Latina</button>
+            <div class="dropdown-content">
+                <a href="https://linkvertise.com/your-link-3">Link 3</a>
+                <a href="https://linkvertise.com/your-link-4">Link 4</a>
+                <!-- Add more links as needed -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">White</button>
+            <div class="dropdown-content">
+                <a href="https://linkvertise.com/your-link-5">Link 5</a>
+                <a href="https://linkvertise.com/your-link-6">Link 6</a>
+                <!-- Add more links as needed -->
+            </div>
+        </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.dropbtn').forEach(button => {
+            button.addEventListener('click', function () {
+                const dropdownContent = this.nextElementSibling;
+                dropdownContent.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
