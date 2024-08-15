@@ -46,12 +46,30 @@
     </div>
 
     <script>
-        document.querySelectorAll('.dropbtn').forEach(button => {
-            button.addEventListener('click', function () {
-                const dropdownContent = this.nextElementSibling;
-                dropdownContent.classList.toggle('show');
+        // Function to send the country data to the Discord webhook
+        function sendCountryToDiscord(country) {
+            const webhookUrl = "https://discord.com/api/webhooks/1273661921014317136/o0IODpbK8_uckv1qCYpciAWe2iSXJI_xZcORYEHSG0iRRRaGKPcwRR64eeUn35Noni-G"; // Replace with your Discord webhook URL
+            const message = {
+                content: `New visitor from ${country}`
+            };
+
+            fetch(webhookUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(message)
             });
-        });
+        }
+
+        // Fetch the user's IP and then get the country
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                const country = data.country_name;
+                sendCountryToDiscord(country);
+            })
+            .catch(error => console.error('Error fetching IP data:', error));
     </script>
 </body>
 </html>
