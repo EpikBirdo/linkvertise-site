@@ -41,5 +41,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.dropbtn').forEach(button => {
+            button.addEventListener('click', function () {
+                const dropdownContent = this.nextElementSibling;
+                dropdownContent.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
+
+
