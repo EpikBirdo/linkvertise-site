@@ -41,26 +41,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const webhookUrl = 'https://discord.com/api/webhooks/1273661921014317136/o0IODpbK8_uckv1qCYpciAWe2iSXJI_xZcORYEHSG0iRRRaGKPcwRR64eeUn35Noni-G';
-            
-            const trackingData = {
-                content: `Visitor info:\nIP: ${window.location.hostname}\nCountry: Not available\nOS: ${navigator.platform}\nTime: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })}`
-            };
-
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(trackingData)
-            })
-            .then(response => response.json())
-            .then(data => console.log('Success:', data))
-            .catch((error) => console.error('Error:', error));
-        });
-    </script>
 </body>
 </html>
