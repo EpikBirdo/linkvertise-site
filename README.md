@@ -1,2 +1,1 @@
-# linkvertise-site
-just an OF leak site, tracking is purely for site traffic purposes
+bro I need to figure some shit out for this site
